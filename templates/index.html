@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>PhysicsGPT Oral Exam Coach</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}" />
+  </head>
+  <body>
+    <main class="container">
+      <h1>PhysicsGPT Oral Exam Coach</h1>
+      <p class="subtitle">Ask any physics question for competitive exams and hear the answer aloud.</p>
+
+      <section class="card">
+        <label for="question">Physics Question</label>
+        <textarea id="question" rows="6" placeholder="Example: A block slides down an incline with friction... derive acceleration."></textarea>
+
+        <div class="controls">
+          <div>
+            <label for="exam">Exam</label>
+            <select id="exam">
+              {% for exam in exam_options %}
+              <option value="{{ exam }}">{{ exam }}</option>
+              {% endfor %}
+            </select>
+          </div>
+
+          <div>
+            <label for="level">Student Level</label>
+            <select id="level">
+              <option value="middle-school">Middle School</option>
+              <option value="high-school" selected>High School</option>
+              <option value="college">College</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="actions">
+          <button id="answerBtn">Generate Answer</button>
+          <button id="speakBtn" disabled>Speak Answer</button>
+          <button id="stopBtn" disabled>Stop</button>
+        </div>
+
+        <p id="status"></p>
+      </section>
+
+      <section class="card">
+        <h2>Answer</h2>
+        <article id="answer">Your answer will appear here.</article>
+      </section>
+    </main>
+
+    <script src="{{ url_for('static', filename='app.js') }}"></script>
+  </body>
+</html>

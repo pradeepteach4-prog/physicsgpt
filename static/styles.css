@@ -1,0 +1,86 @@
+:root {
+  color-scheme: light dark;
+  font-family: Inter, system-ui, -apple-system, sans-serif;
+}
+
+body {
+  margin: 0;
+  background: #0f172a;
+  color: #e2e8f0;
+}
+
+.container {
+  max-width: 900px;
+  margin: 2rem auto;
+  padding: 0 1rem;
+}
+
+h1 {
+  margin-bottom: 0.25rem;
+}
+
+.subtitle {
+  color: #94a3b8;
+  margin-bottom: 1.5rem;
+}
+
+.card {
+  background: #111827;
+  border: 1px solid #334155;
+  border-radius: 12px;
+  padding: 1rem;
+  margin-bottom: 1rem;
+}
+
+label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-weight: 600;
+}
+
+textarea,
+select,
+button {
+  width: 100%;
+  border-radius: 8px;
+  border: 1px solid #475569;
+  padding: 0.65rem;
+  font-size: 1rem;
+  background: #0b1220;
+  color: #e2e8f0;
+}
+
+.controls {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.actions {
+  margin-top: 1rem;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0.75rem;
+}
+
+button {
+  cursor: pointer;
+  font-weight: 600;
+}
+
+button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+#status {
+  min-height: 1.25rem;
+  color: #93c5fd;
+  margin-top: 0.75rem;
+}
+
+#answer {
+  white-space: pre-wrap;
+  line-height: 1.5;
+}
